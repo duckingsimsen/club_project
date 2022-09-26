@@ -1,0 +1,145 @@
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+}
+
+/* 전역변수 */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+body
+{
+    -ms-overflow-style: none;
+}
+    
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+main
+{
+    width: 100%;
+    height: 90vh;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+#assem_
+{
+    min-width: 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+/* 매뉴바 */
+
+#header
+{
+    display: flex;
+    background-color: rgb(24, 27, 31);
+}
+
+.logo_
+{
+    width: 5%;
+}
+
+#assem_ .logo_ .logo_img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#assem_ #header .menu_
+{
+    width: 50%;
+    margin-left: 20%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#header .menu_ ul
+{
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* 동아리 홍보 */
+
+.contents_::-webkit-scrollbar
+{
+    display: none;
+}
+
+#s1
+{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(http://www.koreaisacademy.com/renewal2016/img/curriculum/web02.jpg);
+    scroll-snap-align: center;
+    background-size: cover;
+}
+
+#s2
+{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(http://www.koreaisacademy.com/renewal2016/img/curriculum/smart01.jpg);
+    scroll-snap-align: center;
+    background-size: cover;
+}
+
+#s3
+{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://cdn.inflearn.com/public/courses/325031/course_cover/5f8675ac-631d-407b-a62d-bd0d88bbe33d/first-machine-learning-eng.png);
+    scroll-snap-align: center;
+    background-size: cover;
+}
+.scroll-area
+{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+}
+
+.scroll-area h2
+{
+    margin-top: 3%;
+    margin-right: 85.5%;
+    font-size: 40pt;
+}
+
+.scroll-area p
+{
+    margin-top: 4%;
+    margin-left: 3%;
+    font-size: 20pt;
+    text-align: left;
+}
+
+#assem_ .to_top_
+{
+    position: absolute;
+    right: -4%;
+    top: 90%;
+    z-index: 10;
+}
