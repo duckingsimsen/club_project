@@ -13,17 +13,28 @@ a
 {
     text-decoration: none;
     color: white;
-    font-size: 30px;
-    font-weight: bold;
 }
 
-#main_
+body
 {
-    min-width: 1440px;
-    width: 100%;
+    -ms-overflow-style: none;
+}
+    
+::-webkit-scrollbar
+{
+    display: none;
 }
 
-.header
+#assem_
+{
+    min-width: 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+/* 매뉴바 */
+
+#header
 {
     display: flex;
     background-color: rgb(24, 27, 31);
@@ -31,23 +42,24 @@ a
 
 .logo_
 {
-    width: 6%;
-    height: 6%;
+    width: 5%;
 }
 
-#main_ .logo_ .logo_img
+#assem_ .logo_ .logo_img
 {
     width: 100%;
     height: 100%;
 }
 
-#main_ .header .menu_
+#assem_ #header .menu_
 {
     width: 50%;
     margin-left: 20%;
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.header .menu_ ul
+#header .menu_ ul
 {
     display: flex;
     height: 100%;
