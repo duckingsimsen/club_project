@@ -1,0 +1,219 @@
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    position: relative;
+    min-width: 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+li
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+main
+{
+    width: 100%;
+    height: 90vh;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+#assem_
+{
+    min-width: 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+#header
+{
+    display: flex;
+    background-color: rgb(24, 27, 31);
+}
+
+.logo_
+{
+    width: 5%;
+}
+
+#assem_ .logo_ .logo_img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#assem_ #header .menu_
+{
+    width: 50%;
+    margin-left: 20%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#header .menu_ ul
+{
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* main_ */
+
+.contents_::-webkit-scrollbar
+{
+    display: none;
+}
+
+#swiper_
+{
+    scroll-snap-align: center;
+}
+
+#club_
+{
+    scroll-snap-align: center;
+}
+
+.scroll-area
+{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 90vh;
+}
+
+.swiper-slide {
+    
+    background-image: url("images/cat1.jpg");
+    background-size: cover;
+    text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    display: flex;
+    
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;     
+    -webkit-align-items: center;            /* 세로 중간 정렬 */
+    -webkit-justify-content: center;        /* 가로 중간 정렬 */
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*change progressbar place*/
+.swiper > .swiper-pagination-progressbar{
+    top: auto;
+    bottom: 0%;
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+}
+
+/*change progressbar color*/
+.swiper > .swiper-pagination-progressbar > .swiper-pagination-progressbar-fill{
+    background-color: rgb(41, 50, 61);
+}
+
+.bottom{
+    width:100%;
+    height: 100%;
+    background-color: rgb(24, 27, 31);
+
+}
+.bottom_main{
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.main_top{
+    background-color: rgb(250, 157, 35);
+    width: 40%;
+    height: 25%;
+}
+.top_title{
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: large;
+}
+.top_text{
+    word-break: break-all;
+}
+.introduction_
+{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+}
+.main_middle{
+    background-color: aqua;
+    width: 40%;
+    height: 50%;
+}
+.main_middle:hover
+{
+    cursor: pointer;
+}
+.main_bottom{
+    background-color: blue;
+    width: 40%;
+    height: 50%;
+}
+.main_bottom:hover
+{
+    cursor: pointer;
+}
