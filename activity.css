@@ -1,0 +1,122 @@
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+}
+
+/* 전역변수 */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+body
+{
+    -ms-overflow-style: none;
+}
+    
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+main
+{
+    width: 100%;
+    height: 90vh;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+#assem_
+{
+    min-width: 100%;
+    width: 100%;
+}
+
+/* 매뉴바 */
+
+#header
+{
+    display: flex;
+    background-color: rgb(24, 27, 31);
+}
+
+.logo_
+{
+    width: 5%;
+}
+
+#assem_ .logo_ .logo_img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#assem_ #header .menu_
+{
+    width: 50%;
+    margin-left: 20%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#header .menu_ ul
+{
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* activity */
+
+.activity_
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 235, 235);
+}
+
+.activity_ .selecter_
+{
+    display: flex;
+    background-color: rgb(24, 27, 31);
+    border-radius: 50px;
+    width: 80%;
+    margin: 2.5% auto 0 auto;
+    justify-content: space-around;
+}
+
+.activity_ .select_item
+{
+    display: flex;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    height: 3em;
+    align-items: center;
+}
+
+.activity_ .info_card
+{
+    margin-top: 4%;
+    background-color: rgb(177, 174, 34);
+    width: 100%;
+}
