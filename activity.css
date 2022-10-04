@@ -97,21 +97,65 @@ main
 .activity_ .selecter_
 {
     display: flex;
+    margin: 2.5% auto 0 auto;
+    justify-content: space-between;
+    width: 80%; 
     background-color: rgb(24, 27, 31);
     border-radius: 50px;
-    width: 80%;
-    margin: 2.5% auto 0 auto;
-    justify-content: space-around;
 }
 
 .activity_ .select_item
 {
     display: flex;
     color: white;
+    background-color: rgb(24, 27, 31);
     font-size: 25px;
     font-weight: bold;
     height: 3em;
     align-items: center;
+    border-radius: 50px;
+    width: 10%;
+    justify-content: center;
+}
+
+/* #all
+{
+    width: 1%;
+}
+
+#web
+{
+    width: auto ;
+}
+
+#app
+{
+    width: auto ;
+}
+
+#rm
+{
+    width: auto ;
+}
+
+#CTF
+{
+    width: auto ;
+}
+
+#fore
+{
+    width: auto ;
+}
+
+#hak
+{
+    width: auto ;
+} */
+
+.activity_ .select_item:hover
+{
+    background-color:rgb(235, 235, 235);
 }
 
 .activity_ .info_card
@@ -120,3 +164,5 @@ main
     background-color: rgb(177, 174, 34);
     width: 100%;
 }
+
+
