@@ -22,9 +22,19 @@ a
     color: white;
 }
 
+img
+{
+    
+    width: 100%;
+    height: 70%;
+    object-fit: fill;
+    border-radius: 14px 14px 0 0;
+}
+
 body
 {
     -ms-overflow-style: none;
+    min-width: 1044px !important;
 }
     
 ::-webkit-scrollbar
@@ -45,7 +55,6 @@ main
 
 #assem_
 {
-    min-width: 100%;
     width: 100%;
 }
 
@@ -160,9 +169,18 @@ main
 
 .activity_ .info_card
 {
-    margin-top: 4%;
-    background-color: rgb(177, 174, 34);
     width: 100%;
+    margin: 2.5% auto 0 auto;
+    padding: 0 !important;
 }
 
+.activity_ .col_
+{
+    height: 350px !important;
+}
 
+.activity_ .card_
+{
+    border-radius: 15px !important;
+    height: 100% !important;
+}
