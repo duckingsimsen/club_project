@@ -127,6 +127,11 @@ main
     justify-content: center;
 }
 
+.cards_:hover
+{
+    cursor: pointer;
+}
+
 /* #all
 {
     width: 1%;

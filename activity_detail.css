@@ -1,0 +1,257 @@
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+}
+img{
+    border-style: none;
+}
+div{
+    display:block;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+li
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+#context{
+    color: white;
+    float: left;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+#assem_
+{
+    min-width: 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+#header
+{
+    display: flex;
+    background-color: rgb(24, 44, 63);
+}
+
+.logo_
+{
+    width: 5%;
+}
+
+#assem_ .logo_ .logo_img
+{
+    width: 100%;
+    height: 100%;
+}
+/*fds*/
+#assem_ #header .menu_
+{
+    width: 50%;
+    margin-left: 20%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#header .menu_ ul
+{
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* middle */
+#middle{
+    background-color: rgb(24, 27, 31);
+    color: white;
+    width:100%;
+    padding: 174px 0px 50px;
+}
+#product{
+
+    padding: 0px 150px 0px 150px;
+}
+#name_product{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+    margin-top: 16px;
+    margin-bottom: 26px;
+}
+#first{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#member{
+    display: inline-block;
+    width: 170px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 160%;
+    letter-spacing: -0.02em;
+    /* color: rgb(51, 54, 58); */
+}
+#member_list{
+    
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    /* color: rgb(37, 40, 45); */
+    flex-wrap: wrap;
+}
+#second{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#program{
+    display: inline-block;
+    width: 170px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 160%;
+    letter-spacing: -0.02em;
+}
+#program_list{
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    flex-wrap: wrap;
+}
+#third{
+    margin: 38px 0px 112px;
+}
+#discription{
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    /* color: rgb(37, 40, 45); */
+    flex-wrap: wrap;
+}
+#photo{
+    width: 80%;
+    padding: 0px 150px 0px 150px;
+    display: block;
+    margin: auto;
+    margin-bottom: 7%;
+}
+#retrospect{
+    
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+#retrospect_box{
+    width: auto;
+    /* padding: 0px 160px; */
+    margin-bottom: 168px;
+}
+#retrospect_main{
+    /* margin-left: -30px; */
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    
+    justify-content: center;
+}
+#retrospect_text_border{
+
+    /* padding-left: 30px; */
+    background-clip: padding-box;
+    /* width: auto !important; */
+    width: min-content;
+    margin-right: 1%;
+}
+/* ,#retrospect_text_2,#retrospect_text_3,#retrospect_text_4 */
+#retrospect_text_1,#retrospect_text_2{
+    width: auto;
+    min-width: auto;
+    width:50%;
+    /* width: 635px;  */
+    height: auto;
+    border-radius: 20px;
+    background-color: rgb(65, 117, 169);;
+    min-width: 584px;
+    padding: 24px;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+#member_name{
+    
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 160%;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+#bottom{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#bottom_container{
+    outline: 0;
+    border: 0;
+    margin:0 3% 0 0;
+    background-color: rgb(24, 27, 31);
+
+}
+#bottom_menu{
+    height: auto;
+    margin-bottom: 3%;
+
+}
+/* #bottom_menu_1{
+    height: auto;
+    margin-bottom: 3%;
+
+}
+#bottom_menu_2{
+    height: auto;
+    margin-bottom: 3%;
+}
+#bottom_menu_3{
+    height: auto;
+    margin-bottom: 3%;
+}  */
+
+
+
