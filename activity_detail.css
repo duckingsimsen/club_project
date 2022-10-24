@@ -19,6 +19,10 @@ body {
     position: relative;
     height: 100%;
 }
+::-webkit-scrollbar
+{
+    display: none;
+}
 li
 {
     list-style: none;
@@ -50,7 +54,7 @@ body {
 #header
 {
     display: flex;
-    background-color: rgb(24, 44, 63);
+    background-color: rgb(24, 27, 31);
 }
 
 .logo_
@@ -83,7 +87,7 @@ body {
 
 /* middle */
 #middle{
-    background-color: rgb(24, 27, 31);
+    background-color: rgb(24, 44, 63);
     color: white;
     width:100%;
     padding: 174px 0px 50px;
@@ -159,12 +163,19 @@ body {
     /* color: rgb(37, 40, 45); */
     flex-wrap: wrap;
 }
-#photo{
-    width: 80%;
-    padding: 0px 150px 0px 150px;
+.img_container
+{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto 250px auto;
+}
+#photo
+{
+    width: 100%;
+    /* padding: 0px 150px 0px 150px;
     display: block;
     margin: auto;
-    margin-bottom: 7%;
+    margin-bottom: 7%; */
 }
 #retrospect{
     
