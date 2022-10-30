@@ -1,0 +1,126 @@
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+}
+img{
+    border-style: none;
+}
+div{
+    display:block;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+li
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+#context{
+    color: white;
+    float: left;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+#assem_
+{
+    min-width: 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+#header
+{
+    display: flex;
+    /* background-color: rgb(24, 44, 63); */
+    background-color: rgb(24, 27, 31);
+    
+}
+
+.logo_
+{
+    width: 5%;
+}
+
+#assem_ .logo_ .logo_img
+{
+    width: 100%;
+    height: 100%;
+}
+/*fds*/
+#assem_ #header .menu_
+{
+    width: 50%;
+    margin-left: 20%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#header .menu_ ul
+{
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+/* middle */
+#middle{
+    /* background-color: rgb(24, 27, 31); */
+    background-color: rgb(53 58 64);
+    color: white;
+    width:100%;
+    padding: 174px 0px 200px;
+}
+
+#notice_top{
+    margin-left: auto;
+    display: flex;
+    width: 65%;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    margin-right: 25%;
+}
+#notice{
+    font-size: 17px;
+}
+#search{
+    font-size: 17px;
+}
+#notice_middle{
+    margin-left: auto;
+    width: 80%;
+    margin-right: 10%;
+}
+#notice_post{
+    height: 30px;
+    display: flex;
+    font-size: 17px;
+    margin-bottom: 4px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    align-items: center;
+    line-height: 33px;
+}
+#notice_post_num{ width: 15%;height: 100%;border-right: 1px solid white;}
+#notice_post_name{width: 50%;height: 100%;border-right: 1px solid white;}
+#notice_post_user{width: 15%;height: 100%;border-right: 1px solid white;}
+#notice_post_date{width: 20%;height: 100%;}
