@@ -1,0 +1,66 @@
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+}
+
+/* 전역변수 */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+img
+{
+    width: 150px;
+    height: 150px;
+}
+
+body
+{
+    -ms-overflow-style: none;
+}
+    
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+main
+{
+    height: 100vh;
+    background-color: rgb(235, 235, 235);
+    /* color: rgb(53, 58, 64); */
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.log_
+{
+    width: 40%;
+    flex-direction: column;
+}
+
+.logo_
+{
+    margin-top: 12%;
+    height: 15%;
+}
+
+.login_
+{
+    margin-top: 16%;
+    /* border: 1px solid; */
+}
