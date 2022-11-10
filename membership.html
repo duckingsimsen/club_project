@@ -19,8 +19,8 @@
                 <div class = "logo_">
                     <img src = "images/assem_logo_background_edit.png">
                 </div>
-                <div class = "login_">
-                    <form method = "post" action = "./login.php">
+                <div class = "login_ ">
+                    <form method = "post" action = "./membership.php">
                         <div class="mb-3">
                           <label class="form-label">학번</label> <!--for="exampleInputEmail1" -->
                           <input type = "text" name = "id" class="form-control" aria-describedby="emailHelp"> <!--id="exampleInputEmail1" -->
@@ -29,12 +29,15 @@
                           <label class="form-label">비밀번호</label> <!--for="exampleInputPassword1"-->
                           <input type="password" name = "pw" class="form-control"> <!--id="exampleInputPassword1"-->
                         </div>
+                        <div class = "mb-3">
+                            <label class = "form-label">이름</label>
+                            <input type = "text" name = "name" class = "form-control">
+                        </div>
                         <!-- <div class="mb-3 form-check">
                           <input type="checkbox" class="form-check-input" id="exampleCheck1">
                           <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div> -->
-                        <button type = "submit" class="btn btn-primary">로그인</button>
-                        <button type = "button" class = "btn btn-primary" onClick = "location.href = './membership.html'">회원가입</button>
+                        <button type = "submit" class = "btn btn-primary">회원가입</button>
                     </form>
                 </div>
             </div>

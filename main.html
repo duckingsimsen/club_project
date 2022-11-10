@@ -13,7 +13,7 @@
   <body class = "th_">
     <div id = "assem_">
         <div id = "header">
-          <div class = "logo_"><img class = "logo_img" src = "images/assem_logo.png" href = "#"></div>
+          <div class = "logo_" id = "login_" ondblclick = "log_in()"><img class = "logo_img" src = "images/assem_logo.png" href = "#"></div>
             <div class = "menu_">
               <ul>
                 <li><a class = "about" href = "#club_">동아리 정보</a></li>
@@ -84,6 +84,11 @@
           },
           loop: true
         });
+
+        function log_in()
+        {
+          document.getElementById("login_").innerHTML = location.href = "./login.html";
+        }
       </script>
     </div>
   </body>
