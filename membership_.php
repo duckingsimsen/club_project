@@ -1,4 +1,5 @@
 <?php
+    header('Content-type: text/html; charset=utf-8');
     $servername = "localhost";
     $username = "root";
     $password = "tlatms2033!";
@@ -15,7 +16,7 @@
     $pw_ = $_POST['pw'];
     $userpw = password_hash($pw_, PASSWORD_DEFAULT);
     
-    $sql = "INSERT INTO assem_login (l_name,l_id,l_pw) VALUES ('".$name."','".$id."','".$userpw."');";
+    $sql = "INSERT INTO assem_login (a_name, a_id, a_pw) VALUES ('$name','$id','$userpw');";
     $result = mysqli_query($conn, $sql);
     if($result) 
     {
