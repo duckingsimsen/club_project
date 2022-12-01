@@ -21,11 +21,17 @@
     $result_3 = $sql_5 -> fetch_array();
     $id_ = $result_3["a_id"];
 
+    $sql_6 = "SELECT a_name FROM assem_login WHERE a_id = $id;";
+    $sql_7 = mysqli_query($db, $sql_6);
+    $result_4 = $sql_7 -> fetch_array();
+    $name_ = $result_4["a_name"];
+
     if($id_ != null)//id가 있음
     {
         if(password_verify($pw, $hash))
         {
-            echo "<script type = 'text/javascript'> location.replace('log_success.html'); </script>";
+            echo "<script type = 'text/javascript'> alert('반갑습니다. $name_ 님');</script>";
+            echo "<script type = 'text/javascript'> location.replace('main.html'); </script>";
         }
         else
         {
