@@ -155,3 +155,17 @@ main
     border-radius: 15px !important;
     height: 100% !important;
 }
+
+.write_
+{
+    display: flex;
+    margin: 100px 0 50px 0;
+}
+.write_btn
+{
+    width: 4% !important;
+    margin-left: 80% !important;
+    background-color: hsl(160, 0%, 66%) !important;
+    border-radius: 5px !important;
+    border-color: hsl(160, 0%, 66%) !important;
+}
