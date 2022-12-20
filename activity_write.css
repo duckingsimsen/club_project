@@ -25,6 +25,7 @@ a
 body
 {
     -ms-overflow-style: none;
+    background-color: rgb(235, 235, 235);
 }
     
 ::-webkit-scrollbar
