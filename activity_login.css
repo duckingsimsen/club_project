@@ -169,3 +169,42 @@ main
     border-radius: 5px !important;
     border-color: hsl(160, 0%, 66%) !important;
 }
+
+/* ############################################################ */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    justify-content: center;
+    align-items: center;
+}
+nav
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2.5% auto 0 auto;
+}
+nav a
+{
+    position: relative;
+    margin: 0 20px;
+    font-size:2em;
+    color:#000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav #underline
+{
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: #000000;
+    bottom: -9px;
+    transition: 0.2s;
+    border-radius: 5px;
+}
