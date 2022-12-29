@@ -31,42 +31,13 @@
             <div class = "activity_">
                 <nav>
                     <div id="underline"></div>
-                    <a href="#">ALL</a>
-                    <?php
-                        $sql_1 = "SELECT * FROM assem_activity";
-                        $result_1 = mysqli_query($db, $sql_1); // 전체니까 상관없이 그냥 전체 출력
-                    ?>
-                    <a href="#">웹 개발</a>
-                    <?php
-                        $sql_2 = "SELECT * FROM assem_activity WHERE department = '웹 개발';";
-                        $result_2 = mysqli_query($db, $sql_2);
-                        $num = $result_2['department'];
-                        echo 'success';
-                    ?>
-                    <a href="#">앱 개발</a><?php
-                        $sql_3 = "SELECT * FROM assem_activity WHERE department = '앱 개발';";
-                        $result_3 = mysqli_query($db, $sql_3);
-                    ?>
-                    <a href="#">머신러닝</a>
-                    <?php
-                        $sql_4 = "SELECT * FROM assem_activity WHERE department = '머신러닝';";
-                        $result_4 = mysqli_query($db, $sql_4);
-                    ?>
-                    <a href="#">CTF</a>
-                    <?php
-                        $sql_5 = "SELECT * FROM assem_activity WHERE department = 'CTF';";
-                        $result_5 = mysqli_query($db, $sql_5);
-                    ?>
-                    <a href="#">포렌식</a>
-                    <?php
-                        $sql_6 = "SELECT * FROM assem_activity WHERE department = '포렌식';";
-                        $result_6 = mysqli_query($db, $sql_6);
-                    ?>
-                    <a href="#">웹 해킹</a>
-                    <?php
-                        $sql_7 = "SELECT * FROM assem_activity WHERE department = '웹 해킹';";
-                        $result_7 = mysqli_query($db, $sql_7);
-                    ?>
+                    <a href="#" id = "all" name = "ALL" onclick = 'activity("all");'>ALL</a>
+                    <a href="#" id = "web" name = "웹 개발" onclick = 'activity("web");'>웹 개발</a>
+                    <a href="#" id = "app" name = "앱 개발" onclick = 'activity("app");'>앱 개발</a>
+                    <a href="#" id = "mr" name = "머신러닝" onclick = 'activity("mr");'>머신러닝</a>
+                    <a href="#" id = "CTF" name = "CTF" onclick = 'activity("CTF");'>CTF</a>
+                    <a href="#" id = "fore" name = "포렌식" onclick = 'activity("fore");'>포렌식</a>
+                    <a href="#" id = "hak" name = "웹 해킹" onclick = 'activity("hak");'>웹 해킹</a>
                 </nav>
 
                 <div class = "info_card container">
@@ -145,12 +116,19 @@
                     // console.log(e.offsetLeft+"px");
                    
                 }
+
                 item.forEach(link =>
                 {
                     link.addEventListener('click', (event)=>{
                         select(event.target);
                     })
                 })
+
+                function activity(department)
+                {
+                    var log_ = document.getElementById(department);
+                    alert(department);
+                }
             </script>
             <!-- <div class = "activity_">
                 <div class = "selecter_">
