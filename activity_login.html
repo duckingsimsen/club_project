@@ -2,16 +2,22 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Assem</title>
-            <link rel = "shortcut icon" href = "./images/assem_logo_background.ico" type = "image/x-icon" sizes = "16x16">
-            <link rel = "icon" href = "./images/assem_logo_background.ico" type = "immaeg/x-icon" sizes = "16x16">
-            <script src = "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity = "sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin = "anonymous"></script>
-            <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel = "stylesheet" integrity = "sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin = "anonymous">
-            <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity = "sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin = "anonymous"></script>
-            <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity = "sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin = "anonymous"></script>
-            <link rel = "stylesheet" href = "activity_login.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assem</title>
+        <link rel = "shortcut icon" href = "./images/assem_logo_background.ico" type = "image/x-icon" sizes = "16x16">
+        <link rel = "icon" href = "./images/assem_logo_background.ico" type = "immaeg/x-icon" sizes = "16x16">
+        <script src = "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity = "sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin = "anonymous"></script>
+        <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel = "stylesheet" integrity = "sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin = "anonymous">
+        <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity = "sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin = "anonymous"></script>
+        <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity = "sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin = "anonymous"></script>
+        <link rel = "stylesheet" href = "activity_login.css">
+        <script language = 'javascript'>
+            function activity(department)
+            {
+                var log_ = department;
+            }
+        </script>
     </head>
     <body class = "th_">
         <!-- 스크롤 내리면 그에 따른 스크립트로 위에 메뉴 없에고 옆에 x자를 나타내서 누르면 메뉴 나올수있게 온클릭 다른방법 -->
@@ -39,7 +45,22 @@
                     <a href="#" id = "fore" name = "포렌식" onclick = 'activity("fore");'>포렌식</a>
                     <a href="#" id = "hak" name = "웹 해킹" onclick = 'activity("hak");'>웹 해킹</a>
                 </nav>
+                <?php
+                    require_once __DIR__ . '/db.php';
+                    define('db', true);
 
+                    $department = '<script>document.write(log_);</script>';
+                    $a = '<script>document.write(Roomidx);</script>';
+                    echo $department;
+                    if($department != null)
+                    {
+                        $sql_1 = "SELECT * FROM assem_activity WHERE department = '$department';";
+                        $result_1 = mysqli_query($db, $sql_1);
+                        $row_1 = mysqli_num_rows($result_1);
+                    }
+                    echo 'success';
+                    echo "<script>alert(document.write(log_))</script>";
+                ?>
                 <div class = "info_card container">
                     <div class = "row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3">
                         <div class = "col col_ cards_" onclick = "location.href='activity_detail.html'">
@@ -116,95 +137,21 @@
                     // console.log(e.offsetLeft+"px");
                    
                 }
-
                 item.forEach(link =>
                 {
                     link.addEventListener('click', (event)=>{
                         select(event.target);
                     })
                 })
-
-                function activity(department)
-                {
-                    var log_ = document.getElementById(department);
-                    alert(department);
-                }
             </script>
-            <!-- <div class = "activity_">
-                <div class = "selecter_">
-                    <div class = "select_item tab" id = "all">All</div>
-                    <div class = "select_item tab" id = "web">웹 개발</div>
-                    <div class = "select_item tab" id = "app">앱 개발</div>
-                    <div class = "select_item tab" id = "rm">머신러닝</div>
-                    <div class = "select_item tab" id = "CTF">CTF</div>
-                    <div class = "select_item tab" id = "fore">포렌식</div>
-                    <div class = "select_item tab" id = "hak">웹 해킹</div>
-                </div>
-
-
-                <div class = "info_card container">
-                    <div class = "row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3">
-                        <div class = "col col_ cards_" onclick = "location.href='activity_detail.html'">
-                            <div class = "card card_">
-                                <img src = "https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg">
-                                <div class = "card-body">
-                                    <p class = "card-title">Card title</p>
-                                    <p class = "card-text">내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = "col col_ cards_" onclick = "location.href='activity_detail.html'">
-                            <div class = "card card_">
-                                <img src = "https://post-phinf.pstatic.net/MjAyMDAyMjlfMjY4/MDAxNTgyOTU0Nzg3MjQ4.PBMFV4WrSJmeSUJ56c4C7Vkz_SsQlJ1SByKU18kkJh0g.T7mQnadCWVtEZ448AGk_9kG1HFBAzdztXZcBjvSbduwg.JPEG/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%82%98%EC%9D%B41.jpg?type=w1200">
-                                <div class = "card-body cb_">
-                                    <p class = "card-title">Card title</p>
-                                    <p class = "card-text">내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = "col col_ cards_" onclick = "location.href='activity_detail.html'">
-                            <div class = "card card_">
-                                <img src = "https://src.hidoc.co.kr/image/lib/2022/5/4/1651651323632_0.jpg">
-                                <div class = "card-body">
-                                    <p class = "card-title">Card title</p>
-                                    <p class = "card-text">내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = "col col_ cards_" onclick = "location.href='activity_detail.html'">
-                            <div class = "card card_">
-                                <img src = "http://www.chemicalnews.co.kr/news/photo/202106/3636_10174_4958.jpg">
-                                <div class = "card-body">
-                                    <p class = "card-title">Card title</p>
-                                    <p class = "card-text">내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = "col col_ cards_" onclick = "location.href='activity_detail.html'">
-                            <div class = "card card_">
-                                <img src = "https://ichef.bbci.co.uk/news/800/cpsprodpb/E172/production/_126241775_getty_cats.png.webp">
-                                <div class = "card-body">
-                                    <p class = "card-title">Card title</p>
-                                    <p class = "card-text">내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = "col col_ cards_" onclick = "location.href='activity_detail.html'">
-                            <div class = "card card_">
-                                <img src = "https://images.mypetlife.co.kr/content/uploads/2022/05/27120923/52041878798_acf34e8861_b.jpg">
-                                <div class = "card-body">
-                                    <p class = "card-title">Card title</p>
-                                    <p class = "card-text">내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳 내용 들어갈곳</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class = "write_">
-                    <button type = "button" class = "write_btn btn btn-primary" onClick = "location.href = './activity_write.html'">
-                        글쓰기
-                    </button>
-                </div>
+            <!-- <div class = "selecter_">
+                <div class = "select_item tab" id = "all">All</div>
+                <div class = "select_item tab" id = "web">웹 개발</div>
+                <div class = "select_item tab" id = "app">앱 개발</div>
+                <div class = "select_item tab" id = "rm">머신러닝</div>
+                <div class = "select_item tab" id = "CTF">CTF</div>
+                <div class = "select_item tab" id = "fore">포렌식</div>
+                <div class = "select_item tab" id = "hak">웹 해킹</div>
             </div> -->
         </div>
     </body>
