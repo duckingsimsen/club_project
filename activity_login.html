@@ -13,9 +13,10 @@
         <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity = "sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin = "anonymous"></script>
         <link rel = "stylesheet" href = "activity_login.css">
         <script language = 'javascript'>
+            var log_;
             function activity(department)
             {
-                var log_ = department;
+                log_ = department;
             }
         </script>
     </head>
@@ -40,7 +41,7 @@
                     <a href="#" id = "all" name = "ALL" onclick = 'activity("all");'>ALL</a>
                     <a href="#" id = "web" name = "웹 개발" onclick = 'activity("web");'>웹 개발</a>
                     <a href="#" id = "app" name = "앱 개발" onclick = 'activity("app");'>앱 개발</a>
-                    <a href="#" id = "mr" name = "머신러닝" onclick = 'activity("mr");'>머신러닝</a>
+                    <a href="#" id = "ml" name = "머신러닝" onclick = 'activity("ml");'>머신러닝</a>
                     <a href="#" id = "CTF" name = "CTF" onclick = 'activity("CTF");'>CTF</a>
                     <a href="#" id = "fore" name = "포렌식" onclick = 'activity("fore");'>포렌식</a>
                     <a href="#" id = "hak" name = "웹 해킹" onclick = 'activity("hak");'>웹 해킹</a>
@@ -50,7 +51,6 @@
                     define('db', true);
 
                     $department = '<script>document.write(log_);</script>';
-                    $a = '<script>document.write(Roomidx);</script>';
                     echo $department;
                     if($department != null)
                     {
@@ -58,8 +58,6 @@
                         $result_1 = mysqli_query($db, $sql_1);
                         $row_1 = mysqli_num_rows($result_1);
                     }
-                    echo 'success';
-                    echo "<script>alert(document.write(log_))</script>";
                 ?>
                 <div class = "info_card container">
                     <div class = "row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3">
