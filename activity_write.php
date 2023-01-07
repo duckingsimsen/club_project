@@ -13,8 +13,7 @@
         echo '<script> alert("부서를 선택하세요") </script>';
         echo "<script> history.back(); </script>";
     }
-
-    echo $department;
+    
     $sql_1 = "INSERT INTO assem_activity (department, title, contents, date_) VALUE ( '$department', '$title', '$contents', '$date_');";
     $result = mysqli_query($db, $sql_1);
 
