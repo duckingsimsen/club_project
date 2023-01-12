@@ -90,3 +90,10 @@ main
 {
     background-color: rgb(yellow);
 }
+
+.bundle
+{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}

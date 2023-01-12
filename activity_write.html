@@ -41,31 +41,33 @@
                     </ul>
                 </div>
             </div>
-            <div class = "write_main">
-                <h3>동이라 활동 내역 쓰기</h3>
+            <div class = "bundle d-flex flex-column mb-3 .justify-content-md-center">
+                <div class = "write_main">
+                    <h3>동이라 활동 내역 쓰기</h3>
+                </div>
+                <table>
+                    <form method = "POST" action = "./activity_write.php">
+                        <select class = "form-select form-select-lg mb-3" aria-label = ".form-select-lg example" type = "text" name = "department" >
+                            <option value = "none" disabled selected hidden>해당하는 부서를 고르시오</option>
+                            <option value = "웹 개발">웹 개발</option>
+                            <option value = "앱 개발">앱 개발</option>
+                            <option value = "머신러닝">머신러닝</option>
+                            <option value = "CTF">CTF</option>
+                            <option value = "포렌식">포렌식</option>
+                            <option value = "웹 해킹">웹 해킹</option>
+                        </select>
+                        <div class = "mb-3">
+                            <label class = "form-label">제목</label>
+                            <input type = "text" name = "title">
+                        </div>
+                        <div class = "mb-3">
+                            <label class = "from-label">내용</label>
+                            <textarea class = "summernote" name = "contents" type = "text"></textarea>
+                        </div>
+                        <button type = "submit" class = "btn btn-primary">글쓰기</button>
+                    </form>
+                </table>
             </div>
-            <table>
-                <form method = "POST" action = "./activity_write.php">
-                    <select class = "form-select form-select-lg mb-3" aria-label = ".form-select-lg example" type = "text" name = "department" >
-                        <option value = "none" disabled selected hidden>해당하는 부서를 고르시오</option>
-                        <option value = "웹 개발">웹 개발</option>
-                        <option value = "앱 개발">앱 개발</option>
-                        <option value = "머신러닝">머신러닝</option>
-                        <option value = "CTF">CTF</option>
-                        <option value = "포렌식">포렌식</option>
-                        <option value = "웹 해킹">웹 해킹</option>
-                    </select>
-                    <div class = "mb-3">
-                        <label class = "form-label">제목</label>
-                        <input type = "text" name = "title">
-                    </div>
-                    <div class = "mb-3">
-                        <label class = "from-label">내용</label>
-                        <textarea class = "summernote" name = "contents" type = "text"></textarea>
-                    </div>
-                    <button type = "submit" class = "btn btn-primary">글쓰기</button>
-                </form>
-            </table>
         </div>
     </body>
     <script>
